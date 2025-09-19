@@ -2,6 +2,7 @@
 let amigos = []
 let nombreAmigo;
 let listaAmigos;
+let cantidadAmigos;
 
 // Implementa una función para agregar amigos
 
@@ -36,9 +37,27 @@ function mostrarListaAmigo(){
         let listaHTML = document.createElement("li");
         listaHTML.textContent = element;
         listaAmigos.appendChild (listaHTML);
-        
+
     }
 }
     }
 
 }
+// Implementa una función para sortear los amigos
+
+/**
+ * Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos. 
+ * Usa Math.random() y Math.floor() para obtener un índice aleatorio.
+ */
+
+function sortearAmigo (){
+    let cantidadAmigos = amigos.length;
+    if (cantidadAmigos === 0) {
+        alert("Por favor, inserte un nombre antes de sortear");
+    } else {
+        let indiceAmigo = Math.floor(Math.random() * cantidadAmigos);
+        let resultadoHTML = document.querySelector("#resultado");
+        resultadoHTML.innerHTML = amigos[indiceAmigo];
+
+    }
+    }
