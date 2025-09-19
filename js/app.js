@@ -12,13 +12,13 @@ let cantidadAmigos;
 
 function agregarAmigos() {
     nombreAmigo = document.getElementById ("amigo").value;
-    if (agregarAmigos.trim() ===""){
+    if (nombreAmigo.trim() ===""){
         alert("el campo está vacio, agrega un nombre");
 
     } else {
         amigos.push (nombreAmigo);
         document.querySelector("#amigo").value = ""; 
-
+        mostrarListaAmigo();
     }
 }
         //Nombre de la funcion mostrar lista amigos
@@ -31,7 +31,7 @@ function agregarAmigos() {
   */
     
 function mostrarListaAmigo(){
-    listaAmigos = querySelector ("#listaAmigos");
+    listaAmigos = document.querySelector ("#listaAmigos");
     listaAmigos.innerHTML = "";
 
     for (let index = 0; index < amigos.length; index++){
@@ -39,8 +39,7 @@ function mostrarListaAmigo(){
 
         let listaHTML = document.createElement("li");
         listaHTML.textContent = element;
-        listaAmigos.appendChild (listaHTML);
-
+        listaAmigos.appendChild(listaHTML);
     }
 }
     
@@ -52,7 +51,7 @@ function mostrarListaAmigo(){
  * Usa Math.random() y Math.floor() para obtener un índice aleatorio.
  */
 
-function sortearAmigo (){
+function sortearAmigo() {
     let cantidadAmigos = amigos.length;
     if (cantidadAmigos === 0) {
         alert("Por favor, inserte un nombre antes de sortear");
