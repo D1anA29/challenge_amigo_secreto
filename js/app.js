@@ -1,6 +1,7 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 let amigos = []
 let nombreAmigo;
+let listaAmigos;
 
 // Implementa una función para agregar amigos
 
@@ -18,7 +19,26 @@ function agregarAmigos() {
         document.querySelector("#amigo").value = ""; 
         //Nombre de la funcion mostrar lista amigos
 
+ // Implementa una función para actualizar la lista de amigos
+
+ /**
+  * Crea una función que recorra el array amigos y agregue cada nombre como un elemento <li> 
+  * dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar nuevos elementos.
+  */
     
+function mostrarListaAmigo(){
+    listaAmigos = querySelector ("#listaAmigos");
+    listaAmigos.innerHTML = "";
+
+    for (let index = 0; index < amigos.length; index++){
+        const element = amigos[index];
+
+        let listaHTML = document.createElement("li");
+        listaHTML.textContent = element;
+        listaAmigos.appendChild (listaHTML);
+        
+    }
+}
     }
 
 }
