@@ -11,13 +11,16 @@ let cantidadAmigos;
  */
 
 function agregarAmigos() {
-    agregarAmigos = document.getElementById ("amigo").value;
+    nombreAmigo = document.getElementById ("amigo").value;
     if (agregarAmigos.trim() ===""){
         alert("el campo está vacio, agrega un nombre");
 
     } else {
         amigos.push (nombreAmigo);
         document.querySelector("#amigo").value = ""; 
+
+    }
+}
         //Nombre de la funcion mostrar lista amigos
 
  // Implementa una función para actualizar la lista de amigos
@@ -40,9 +43,8 @@ function mostrarListaAmigo(){
 
     }
 }
-    }
+    
 
-}
 // Implementa una función para sortear los amigos
 
 /**
@@ -60,4 +62,4 @@ function sortearAmigo (){
         resultadoHTML.innerHTML = amigos[indiceAmigo];
 
     }
-    }
+}
